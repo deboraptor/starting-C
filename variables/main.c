@@ -17,7 +17,7 @@ int main()
         niveau += 1; 
         printf("Bravo ! Vous avez atteint le niveau %d\n", niveau);
     }
-    else ()
+    else
     {
         printf("Ah désolé, il ne vous reste plus que %d vies maintenant !\n\n", nombreDeVies);
     }
