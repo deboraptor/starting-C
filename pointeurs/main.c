@@ -2,11 +2,18 @@
 
 #include <stdio.h>
 
-void main()
+int main(int argc, char *argv[])
 {
-    //int variable = 5;
-    //printf("variable = %d\n", &variable);
-    //printf("adresse variable = %p\n", &variable);
+    int variable = 5;
+    printf("variable = %d\n", variable);
+    printf("adresse variable = %p\n", &variable);
 
-    int *monPointeur = NULL; // ou int* monPointeur
+    //int *monPointeur = NULL; // ou int* monPointeur
+    int *pointeur;
+    pointeur = &variable;
+
+    printf("valeur du pointeur = %p\n", pointeur);
+    printf("valeur contenue dans le pointeur %d\n", *pointeur);
+
+    return 0;
 }
