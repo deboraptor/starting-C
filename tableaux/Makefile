@@ -1,9 +1,11 @@
 CC = gcc
 CFLAGS = -Wall 
 
-SRC = main.c
+#SRC = main.c
+SRC = exo.c
 OBJ = $(SRC:.c=.o)
-BIN = main
+#BIN = main
+BIN = exo
 
 all: $(BIN)
 
