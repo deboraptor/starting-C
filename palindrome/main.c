@@ -14,28 +14,32 @@ int palindrome(void);
 
 int main(void)
 {
-    palindrome();
-    printf("return : \n");
+    int res = palindrome();
+    printf("return : %d\n", res);
 }
 
 int palindrome(void)
 {
-    unsigned char mot;
-    char *coucou = "coucou";
-
-    printf("Entrez un mot: ");
-    scanf("%s", &mot);
+    char coucou[7] = {'c', 'o', 'u', 'c', 'o', 'u', '\0'};
+    char mot[51];
     
-    //printf("mot: %s\n", &mot);
+    printf("Entrez un mot: ");
+    scanf("%50s", mot); // %Ns -> bloquer à 50 caractères max | pas &mot car le nom d’un tableau représente déjà son adresse
 
-    if (mot == *coucou)
+    printf("mot: %s\n", mot);
+    printf("%s\n", coucou);
+
+    // TODO: 
+    // comparer les chaines de caractères en entier
+    //strcmp();
+    if (*mot == *coucou)
     {   
-        printf("oui");
+        printf("oui\n");
         return 1;
     }
     else
     {   
-        printf("non");
+        printf("non\n");
         return 0;
     }
 }
