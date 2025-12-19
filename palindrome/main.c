@@ -10,15 +10,15 @@ mots « kayak », « radar », « coloc », « rêver », « ressasser ».
 #include <stdio.h>
 #include <string.h>
 
-int palindrome(void);
+int isSameWord(void);
 
 int main(void)
 {
-    int res = palindrome();
-    printf("return : %d\n", res);
+    int res = isSameWord();
+    printf("Typed word is 'coucou': %d\n", res);
 }
 
-int palindrome(void)
+int isSameWord(void)
 {
     char coucou[7] = {'c', 'o', 'u', 'c', 'o', 'u', '\0'};
     char mot[51];
@@ -28,18 +28,16 @@ int palindrome(void)
 
     //printf("mot: %s\n", mot);
     //printf("%s\n", coucou);
-    
+
     int cmp = strcmp(mot, coucou);
-    printf("cmp: %d\n", cmp);
+    //printf("cmp: %d\n", cmp);
 
     if (cmp == 0)
     {   
-        printf("oui\n");
         return 1;
     }
     else
     {   
-        printf("non\n");
         return 0;
     }
 }
