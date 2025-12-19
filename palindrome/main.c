@@ -26,13 +26,13 @@ int palindrome(void)
     printf("Entrez un mot: ");
     scanf("%50s", mot); // %Ns -> bloquer à 50 caractères max | pas &mot car le nom d’un tableau représente déjà son adresse
 
-    printf("mot: %s\n", mot);
-    printf("%s\n", coucou);
+    //printf("mot: %s\n", mot);
+    //printf("%s\n", coucou);
+    
+    int cmp = strcmp(mot, coucou);
+    printf("cmp: %d\n", cmp);
 
-    // TODO: 
-    // comparer les chaines de caractères en entier
-    //strcmp();
-    if (*mot == *coucou)
+    if (cmp == 0)
     {   
         printf("oui\n");
         return 1;
