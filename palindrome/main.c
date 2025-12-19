@@ -11,11 +11,15 @@ mots « kayak », « radar », « coloc », « rêver », « ressasser ».
 #include <string.h>
 
 int isSameWord(void);
+int lenIs(void);
 
 int main(void)
 {
     int res = isSameWord();
     printf("Typed word is 'coucou': %d\n", res);
+
+    int len = lenIs();
+    printf("Longueur = %d\n", len);
 }
 
 int isSameWord(void)
@@ -40,4 +44,17 @@ int isSameWord(void)
     {   
         return 0;
     }
+}
+
+int lenIs(void)
+{
+    char string[51];
+    int len = 0;
+
+    printf("Entrez un mot: ");
+    scanf("%50s", string);
+
+    len = strlen(string);
+
+    return len;
 }
