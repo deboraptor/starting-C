@@ -10,7 +10,7 @@ mots « kayak », « radar », « coloc », « rêver », « ressasser ».
 #include <stdio.h>
 #include <string.h>
 
-int isSameWord(void);
+int isCoucou(void);
 int lenIs(void);
 char ask4String(void);
 
@@ -22,16 +22,16 @@ int main(void)
 {   
     ask4String();
 
-    int res = isSameWord();
+    int res = isCoucou();
     printf("Typed word is 'coucou': %d\n", res);
 
     int len = lenIs();
     printf("Longueur = %d\n", len);
 }
 
-int isSameWord(void)
+int isCoucou(void)
 {
-    char coucou[7] = {'c', 'o', 'u', 'c', 'o', 'u', '\0'};    
+    char coucou[] = "coucou";    
     
     //printf("mot: %s\n", mot);
     //printf("%s\n", coucou);
