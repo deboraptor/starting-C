@@ -10,7 +10,7 @@ mots « kayak », « radar », « coloc », « rêver », « ressasser ».
 #include <stdio.h>
 #include <string.h>
 
-int isCoucou(char *, char *);
+int isSameString(char *, char *);
 int lenIs(char *);
 void ask4String(char *);
 int isPalindrome(char *);
@@ -20,17 +20,10 @@ int main(void)
     char string[51];
 
     ask4String(string);
-
-    //int res = isCoucou(string);
-    //printf("Typed word is 'coucou': %d\n", res);
-
-    int len = lenIs(string);
-    //printf("Longueur = %d\n", len);
-
     isPalindrome(string);
 }
 
-int isCoucou(char *a, char *b)
+int isSameString(char *a, char *b)
 {    
     int cmp = strcmp(a, b);
     //printf("cmp: %d\n", cmp);
@@ -63,19 +56,9 @@ void ask4String(char *string)
 int isPalindrome(char *string)
 {
     size_t taille = lenIs(string);
+
     int i;
     long unsigned int mid = taille / 2;
-    //printf("dernière lettre = %c\n", string[taille-1]);
-
-    /*
-    si 
-    debut à moitié (on stocke)
-
-    et 
-    moitié à fin (inversé)
-
-    est égal -> palindrome
-    */
 
     char a[51];
     for (i = 0; i <= mid; i++)
@@ -97,9 +80,7 @@ int isPalindrome(char *string)
         inverse[i] = b[taille-1-i];
     }
 
-    //printf("%s\n", inverse);
     inverse[taille] = '\0';
-    //printf("a = %s\n", a);
-    //printf("inverse =%s\n", inverse);
-    printf("Palindrome ? %d\n", isCoucou(a, inverse));
+    
+    printf("Est-ce un palindrome ? %d\n", isSameString(a, inverse));
 }
