@@ -10,26 +10,24 @@ mots « kayak », « radar », « coloc », « rêver », « ressasser ».
 #include <stdio.h>
 #include <string.h>
 
-int isCoucou(void);
-int lenIs(void);
-char ask4String(void);
-
-// TODO :
-// remove to global
-char string[51];
+int isCoucou(char *);
+int lenIs(char *);
+void ask4String(char *);
 
 int main(void)
 {   
-    ask4String();
+    char string[51];
 
-    int res = isCoucou();
+    ask4String(string);
+
+    int res = isCoucou(string);
     printf("Typed word is 'coucou': %d\n", res);
 
-    int len = lenIs();
+    int len = lenIs(string);
     printf("Longueur = %d\n", len);
 }
 
-int isCoucou(void)
+int isCoucou(char *string)
 {
     char coucou[] = "coucou";    
     
@@ -49,7 +47,7 @@ int isCoucou(void)
     }
 }
 
-int lenIs(void)
+int lenIs(char *string)
 {
     int len = 0;
 
@@ -58,7 +56,7 @@ int lenIs(void)
     return len;
 }
 
-char ask4String(void)
+void ask4String(char *string)
 {
     printf("Entrez un mot: ");
     scanf("%50s", string); // %Ns -> bloquer à 50 caractères max | pas &mot car le nom d’un tableau représente déjà son adresse
