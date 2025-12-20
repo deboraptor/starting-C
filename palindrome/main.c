@@ -12,9 +12,16 @@ mots « kayak », « radar », « coloc », « rêver », « ressasser ».
 
 int isSameWord(void);
 int lenIs(void);
+char ask4String(void);
+
+// TODO :
+// remove to global
+char string[51];
 
 int main(void)
-{
+{   
+    ask4String();
+
     int res = isSameWord();
     printf("Typed word is 'coucou': %d\n", res);
 
@@ -24,16 +31,12 @@ int main(void)
 
 int isSameWord(void)
 {
-    char coucou[7] = {'c', 'o', 'u', 'c', 'o', 'u', '\0'};
-    char mot[51];
+    char coucou[7] = {'c', 'o', 'u', 'c', 'o', 'u', '\0'};    
     
-    printf("Entrez un mot: ");
-    scanf("%50s", mot); // %Ns -> bloquer à 50 caractères max | pas &mot car le nom d’un tableau représente déjà son adresse
-
     //printf("mot: %s\n", mot);
     //printf("%s\n", coucou);
 
-    int cmp = strcmp(mot, coucou);
+    int cmp = strcmp(string, coucou);
     //printf("cmp: %d\n", cmp);
 
     if (cmp == 0)
@@ -48,13 +51,15 @@ int isSameWord(void)
 
 int lenIs(void)
 {
-    char string[51];
     int len = 0;
-
-    printf("Entrez un mot: ");
-    scanf("%50s", string);
 
     len = strlen(string);
 
     return len;
+}
+
+char ask4String(void)
+{
+    printf("Entrez un mot: ");
+    scanf("%50s", string); // %Ns -> bloquer à 50 caractères max | pas &mot car le nom d’un tableau représente déjà son adresse
 }
