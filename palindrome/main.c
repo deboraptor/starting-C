@@ -61,26 +61,30 @@ int isPalindrome(char *string)
     long unsigned int mid = taille / 2;
 
     char a[51];
-    for (i = 0; i <= mid; i++)
+    for (i = 0; i < mid; i++)
     {   
         a[i] = string[i];
         //printf("%c\n", string[i]);
     }
+    a[mid] = '\0';
 
     char b[51];
-    for (i = mid; i < taille; i++)
+    for (i = mid + 1; i < taille; i++)
     {   
-        b[i] = string[i];
+        b[i - mid] = string[i];
         //printf("%c\n", string[i]);
     }
+    b[taille - mid] = '\0';
 
     char inverse[51];
+    int lb = taille - mid;
     for (i = 0; i < taille; i++)
     {   
-        inverse[i] = b[taille-1-i];
+        inverse[i] = b[lb-1-i];
     }
-
-    inverse[taille] = '\0';
+    inverse[lb] = '\0';
     
+    // TODO :
+    // gérer les cas impaire ! -> ignorer le milieu??
     printf("Est-ce un palindrome ? %d\n", isSameString(a, inverse));
 }
