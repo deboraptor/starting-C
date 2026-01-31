@@ -5,7 +5,7 @@
 
 #define MAX 3
 
-
+// TODO: ajouter un BO3 ou BO5
 int game(char computerAnswer[], char userAnswer[]) {
     if (strcmp(computerAnswer, userAnswer) == 0) {
         return -1;
