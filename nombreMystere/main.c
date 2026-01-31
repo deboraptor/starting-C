@@ -4,6 +4,9 @@
 
 #define MAX 100
 
+//TODO: ajouter un compteur d'essais !
+//TODO: gérer les erreurs (trop de caractères entrés, pas bon type de variable, etc.)
+
 int askUser(void) {
     char rawUserInput[5];
     scanf("%s", rawUserInput);
