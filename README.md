@@ -1,4 +1,4 @@
 # Starting C
-Learning C for the first time with OpenClassrooms !
-
-https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c 
+### Open Classrooms Tutorial
+### Training for 42's piscine applying
+### Projetcs
