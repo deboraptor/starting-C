@@ -17,3 +17,7 @@ L'objectif est d'écrire un programme en C qui permet de vérifier si un nombre 
 de Münchhausen. Le programme doit utiliser uniquement des structures conditionnelles et/ou des boucles, mais une 
 contrainte supplémentaire s’ajoute : vous devez utiliser une structure Ternaire (voir Td 01). 
 */
+
+#include <math.h>
+#include <stdio.h>
+
